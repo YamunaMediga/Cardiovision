@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CardioVision: Track A — Cardiovascular Risk Visualization & Multi-Vessel Stenosis Prediction
 
 [![Track A: MDT Challenge](https://img.shields.io/badge/Challenge-Track%20A%20Cardiovascular-blue.svg)](https://github.com)
@@ -124,3 +125,7 @@ Evaluated on the independent holdout test partition ($N = 61$ patients, 20% test
 ## 5. Clinical Research Disclaimer
 
 CardioVision is an experimental decision-support and educational prototype developed for challenge evaluation. It is **not** a certified medical diagnostic device, nor a substitute for invasive coronary angiography, formal diagnostic imaging, or professional clinical assessment. Model attributions reflect statistical feature importance within the trained classifier and must never be interpreted as clinical proof of causation or diagnostic finality.
+=======
+# Cardiovision
+An explainable AI research prototype for coronary artery disease assessment with interactive 3D heart visualization.
+>>>>>>> 27d0a1de4d1ccfb190a2fdc5bed6deb432ee9c46
