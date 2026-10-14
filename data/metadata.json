@@ -1,0 +1,1440 @@
+{
+  "total_cohort_size": 303,
+  "train_samples": 242,
+  "test_samples": 61,
+  "feature_count": 54,
+  "transformed_feature_count": 77,
+  "features": {
+    "Age": {
+      "type": "numeric",
+      "unit": "years",
+      "min": 30,
+      "max": 86,
+      "default": 58,
+      "desc": "Patient Age in years",
+      "category": "Demographics"
+    },
+    "Sex": {
+      "type": "categorical",
+      "options": [
+        "Male",
+        "Fmale"
+      ],
+      "default": "Male",
+      "unit": "",
+      "desc": "Biological sex",
+      "category": "Demographics"
+    },
+    "Weight": {
+      "type": "numeric",
+      "unit": "kg",
+      "min": 48,
+      "max": 120,
+      "default": 74,
+      "desc": "Body Weight",
+      "category": "Vitals & Anthropometrics"
+    },
+    "Length": {
+      "type": "numeric",
+      "unit": "cm",
+      "min": 145,
+      "max": 188,
+      "default": 165,
+      "desc": "Body Height / Stature",
+      "category": "Vitals & Anthropometrics"
+    },
+    "BMI": {
+      "type": "numeric",
+      "unit": "kg/m\u00b2",
+      "min": 18.0,
+      "max": 41.0,
+      "default": 27.2,
+      "desc": "Body Mass Index",
+      "category": "Vitals & Anthropometrics"
+    },
+    "BP": {
+      "type": "numeric",
+      "unit": "mmHg",
+      "min": 90,
+      "max": 180,
+      "default": 130,
+      "desc": "Systolic Blood Pressure",
+      "category": "Vitals & Anthropometrics"
+    },
+    "PR": {
+      "type": "numeric",
+      "unit": "bpm",
+      "min": 60,
+      "max": 110,
+      "default": 75,
+      "desc": "Resting Pulse Rate",
+      "category": "Vitals & Anthropometrics"
+    },
+    "DM": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "Diabetes Mellitus history",
+      "category": "Medical History"
+    },
+    "HTN": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 1,
+      "desc": "Hypertension history",
+      "category": "Medical History"
+    },
+    "Current Smoker": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "Active tobacco smoking status",
+      "category": "Medical History"
+    },
+    "EX-Smoker": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "Past tobacco smoker status",
+      "category": "Medical History"
+    },
+    "FH": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "Family History of Premature CAD",
+      "category": "Medical History"
+    },
+    "Obesity": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Clinical obesity status (BMI \u2265 30)",
+      "category": "Medical History"
+    },
+    "CRF": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Chronic Renal Failure",
+      "category": "Medical History"
+    },
+    "CVA": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Cerebrovascular Accident (Stroke / TIA)",
+      "category": "Medical History"
+    },
+    "Airway disease": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Chronic Obstructive Airway Disease / Asthma",
+      "category": "Medical History"
+    },
+    "Thyroid Disease": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Thyroid dysfunction (Hypo/Hyperthyroidism)",
+      "category": "Medical History"
+    },
+    "CHF": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Congestive Heart Failure history",
+      "category": "Medical History"
+    },
+    "DLP": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "Y",
+      "unit": "",
+      "desc": "Dyslipidemia diagnosis",
+      "category": "Medical History"
+    },
+    "Edema": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "Peripheral lower limb edema",
+      "category": "Physical Exam"
+    },
+    "Weak Peripheral Pulse": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Diminished peripheral arterial pulse",
+      "category": "Physical Exam"
+    },
+    "Lung rales": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Pulmonary crackles / rales on auscultation",
+      "category": "Physical Exam"
+    },
+    "Systolic Murmur": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Cardiac systolic murmur",
+      "category": "Physical Exam"
+    },
+    "Diastolic Murmur": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Cardiac diastolic murmur",
+      "category": "Physical Exam"
+    },
+    "Typical Chest Pain": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 1,
+      "desc": "Substernal exertional chest pain relieved by rest/NTG",
+      "category": "Symptoms"
+    },
+    "Dyspnea": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Exertional dyspnea / shortness of breath",
+      "category": "Symptoms"
+    },
+    "Function Class": {
+      "type": "numeric",
+      "unit": "NYHA 0-3",
+      "min": 0,
+      "max": 3,
+      "default": 1,
+      "desc": "NYHA Functional Class (Heart failure/angina severity)",
+      "category": "Symptoms"
+    },
+    "Atypical": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Atypical anginal symptoms",
+      "category": "Symptoms"
+    },
+    "Nonanginal": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Non-anginal chest discomfort",
+      "category": "Symptoms"
+    },
+    "LowTH Ang": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Low Threshold Angina (angina at low workloads)",
+      "category": "Symptoms"
+    },
+    "Q Wave": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "Pathological Q wave indicating prior infarction",
+      "category": "ECG Findings"
+    },
+    "St Elevation": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "ST-segment elevation on resting 12-lead ECG",
+      "category": "ECG Findings"
+    },
+    "St Depression": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "ST-segment depression on resting 12-lead ECG",
+      "category": "ECG Findings"
+    },
+    "Tinversion": {
+      "type": "binary",
+      "unit": "0=No, 1=Yes",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "desc": "T-wave inversion on 12-lead ECG",
+      "category": "ECG Findings"
+    },
+    "LVH": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Left Ventricular Hypertrophy voltage criteria",
+      "category": "ECG Findings"
+    },
+    "Poor R Progression": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Poor R-wave progression in anterior precordial leads (V1-V4)",
+      "category": "ECG Findings"
+    },
+    "BBB": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "LBBB",
+        "RBBB"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Bundle Branch Block (Left/Right)",
+      "category": "ECG Findings"
+    },
+    "FBS": {
+      "type": "numeric",
+      "unit": "mg/dL",
+      "min": 62,
+      "max": 400,
+      "default": 105,
+      "desc": "Fasting Blood Sugar level",
+      "category": "Laboratory Values"
+    },
+    "CR": {
+      "type": "numeric",
+      "unit": "mg/dL",
+      "min": 0.5,
+      "max": 2.2,
+      "default": 1.0,
+      "desc": "Serum Creatinine",
+      "category": "Laboratory Values"
+    },
+    "TG": {
+      "type": "numeric",
+      "unit": "mg/dL",
+      "min": 37,
+      "max": 1050,
+      "default": 160,
+      "desc": "Serum Triglycerides",
+      "category": "Laboratory Values"
+    },
+    "LDL": {
+      "type": "numeric",
+      "unit": "mg/dL",
+      "min": 18,
+      "max": 232,
+      "default": 110,
+      "desc": "Low-Density Lipoprotein Cholesterol",
+      "category": "Laboratory Values"
+    },
+    "HDL": {
+      "type": "numeric",
+      "unit": "mg/dL",
+      "min": 15.9,
+      "max": 111.0,
+      "default": 42.0,
+      "desc": "High-Density Lipoprotein Cholesterol",
+      "category": "Laboratory Values"
+    },
+    "BUN": {
+      "type": "numeric",
+      "unit": "mg/dL",
+      "min": 8,
+      "max": 52,
+      "default": 16,
+      "desc": "Blood Urea Nitrogen",
+      "category": "Laboratory Values"
+    },
+    "ESR": {
+      "type": "numeric",
+      "unit": "mm/hr",
+      "min": 1,
+      "max": 90,
+      "default": 15,
+      "desc": "Erythrocyte Sedimentation Rate",
+      "category": "Laboratory Values"
+    },
+    "HB": {
+      "type": "numeric",
+      "unit": "g/dL",
+      "min": 9.0,
+      "max": 17.6,
+      "default": 13.5,
+      "desc": "Hemoglobin concentration",
+      "category": "Laboratory Values"
+    },
+    "K": {
+      "type": "numeric",
+      "unit": "mEq/L",
+      "min": 3.0,
+      "max": 6.6,
+      "default": 4.2,
+      "desc": "Serum Potassium concentration",
+      "category": "Laboratory Values"
+    },
+    "Na": {
+      "type": "numeric",
+      "unit": "mEq/L",
+      "min": 130,
+      "max": 156,
+      "default": 140,
+      "desc": "Serum Sodium concentration",
+      "category": "Laboratory Values"
+    },
+    "WBC": {
+      "type": "numeric",
+      "unit": "cells/\u03bcL",
+      "min": 3700,
+      "max": 18000,
+      "default": 7200,
+      "desc": "White Blood Cell Count",
+      "category": "Laboratory Values"
+    },
+    "Lymph": {
+      "type": "numeric",
+      "unit": "%",
+      "min": 7,
+      "max": 60,
+      "default": 30,
+      "desc": "Lymphocyte differential percentage",
+      "category": "Laboratory Values"
+    },
+    "Neut": {
+      "type": "numeric",
+      "unit": "%",
+      "min": 32,
+      "max": 86,
+      "default": 62,
+      "desc": "Neutrophil differential percentage",
+      "category": "Laboratory Values"
+    },
+    "PLT": {
+      "type": "numeric",
+      "unit": "x10\u00b3/\u03bcL",
+      "min": 25,
+      "max": 742,
+      "default": 230,
+      "desc": "Platelet Count",
+      "category": "Laboratory Values"
+    },
+    "EF-TTE": {
+      "type": "numeric",
+      "unit": "%",
+      "min": 15,
+      "max": 60,
+      "default": 50,
+      "desc": "Transthoracic Echocardiogram Ejection Fraction",
+      "category": "Echocardiography"
+    },
+    "Region RWMA": {
+      "type": "numeric",
+      "unit": "score 0-4",
+      "min": 0,
+      "max": 4,
+      "default": 0,
+      "desc": "Regional Wall Motion Abnormality score (0=none to 4=severe/multiple)",
+      "category": "Echocardiography"
+    },
+    "VHD": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "mild",
+        "Moderate",
+        "Severe"
+      ],
+      "default": "N",
+      "unit": "",
+      "desc": "Valvular Heart Disease severity",
+      "category": "Echocardiography"
+    }
+  },
+  "evaluation": {
+    "CAD": {
+      "algorithm": "L1-Regularized Logistic Regression",
+      "model_type": "linear",
+      "accuracy": 0.8032786885245902,
+      "balanced_accuracy": 0.7797157622739018,
+      "precision": 0.8780487804878049,
+      "sensitivity_recall": 0.8372093023255814,
+      "specificity": 0.7222222222222222,
+      "f1_score": 0.8571428571428571,
+      "roc_auc": 0.8953488372093024,
+      "brier_score": 0.12161406244234976,
+      "confusion_matrix": {
+        "tn": 13,
+        "fp": 5,
+        "fn": 7,
+        "tp": 36,
+        "true_positive": 36,
+        "false_positive": 5,
+        "false_negative": 7,
+        "true_negative": 13,
+        "total": 61
+      },
+      "cv_5fold": {
+        "accuracy_mean": 0.8551870748299318,
+        "accuracy_std": 0.07751287625594225,
+        "roc_auc_mean": 0.9284190599316648,
+        "roc_auc_std": 0.04063487843753817,
+        "balanced_accuracy_mean": 0.8498642533936651,
+        "sensitivity_mean": 0.8601680672268908,
+        "f1_mean": 0.8913346742585458
+      },
+      "cv_repeated_25fold": {
+        "accuracy_mean": 0.8617857142857143,
+        "accuracy_std": 0.056570812592969255,
+        "roc_auc_mean": 0.9323407516852895,
+        "roc_auc_std": 0.03749694600995636,
+        "balanced_accuracy_mean": 0.860311570782159,
+        "sensitivity_mean": 0.8632605042016805,
+        "f1_mean": 0.8982003603448814
+      },
+      "test_support": {
+        "class_0_normal": 18,
+        "class_1_stenosis": 43
+      }
+    },
+    "LAD": {
+      "algorithm": "Balanced Random Forest (Depth 5)",
+      "model_type": "tree",
+      "accuracy": 0.7213114754098361,
+      "balanced_accuracy": 0.7080610021786492,
+      "precision": 0.717948717948718,
+      "sensitivity_recall": 0.8235294117647058,
+      "specificity": 0.5925925925925926,
+      "f1_score": 0.7671232876712328,
+      "roc_auc": 0.7919389978213508,
+      "brier_score": 0.18943775536949864,
+      "confusion_matrix": {
+        "tn": 16,
+        "fp": 11,
+        "fn": 6,
+        "tp": 28,
+        "true_positive": 28,
+        "false_positive": 11,
+        "false_negative": 6,
+        "true_negative": 16,
+        "total": 61
+      },
+      "cv_5fold": {
+        "accuracy_mean": 0.7767006802721089,
+        "accuracy_std": 0.055261249587354185,
+        "roc_auc_mean": 0.8495605392792326,
+        "roc_auc_std": 0.050501568697272355,
+        "balanced_accuracy_mean": 0.7587334716100597,
+        "sensitivity_mean": 0.8600985221674877,
+        "f1_mean": 0.8199790338890279
+      },
+      "cv_repeated_25fold": {
+        "accuracy_mean": 0.7908673469387755,
+        "accuracy_std": 0.0626144100681964,
+        "roc_auc_mean": 0.8553702359346641,
+        "roc_auc_std": 0.053972996093884736,
+        "balanced_accuracy_mean": 0.7742009333679024,
+        "sensitivity_mean": 0.865665024630542,
+        "f1_mean": 0.8308474522763645
+      },
+      "test_support": {
+        "class_0_normal": 27,
+        "class_1_stenosis": 34
+      }
+    },
+    "LCX": {
+      "algorithm": "Balanced Random Forest (Depth 5)",
+      "model_type": "tree",
+      "accuracy": 0.7049180327868853,
+      "balanced_accuracy": 0.6785714285714286,
+      "precision": 0.7222222222222222,
+      "sensitivity_recall": 0.5,
+      "specificity": 0.8571428571428571,
+      "f1_score": 0.5909090909090909,
+      "roc_auc": 0.7307692307692308,
+      "brier_score": 0.21596268375770933,
+      "confusion_matrix": {
+        "tn": 30,
+        "fp": 5,
+        "fn": 13,
+        "tp": 13,
+        "true_positive": 13,
+        "false_positive": 5,
+        "false_negative": 13,
+        "true_negative": 30,
+        "total": 61
+      },
+      "cv_5fold": {
+        "accuracy_mean": 0.7147108843537415,
+        "accuracy_std": 0.018002325269772818,
+        "roc_auc_mean": 0.7564045170397258,
+        "roc_auc_std": 0.047031240053734616,
+        "balanced_accuracy_mean": 0.6934684412179875,
+        "sensitivity_mean": 0.6023391812865497,
+        "f1_mean": 0.6150868440502587
+      },
+      "cv_repeated_25fold": {
+        "accuracy_mean": 0.6973639455782312,
+        "accuracy_std": 0.03310128518280507,
+        "roc_auc_mean": 0.7462863480540431,
+        "roc_auc_std": 0.05880858864975704,
+        "balanced_accuracy_mean": 0.6719185319620891,
+        "sensitivity_mean": 0.5598830409356725,
+        "f1_mean": 0.5804031626648996
+      },
+      "test_support": {
+        "class_0_normal": 35,
+        "class_1_stenosis": 26
+      }
+    },
+    "RCA": {
+      "algorithm": "Regularized Light XGBoost",
+      "model_type": "tree",
+      "accuracy": 0.7213114754098361,
+      "balanced_accuracy": 0.7414634146341463,
+      "precision": 0.5517241379310345,
+      "sensitivity_recall": 0.8,
+      "specificity": 0.6829268292682927,
+      "f1_score": 0.6530612244897959,
+      "roc_auc": 0.8036585365853659,
+      "brier_score": 0.19449019677957713,
+      "confusion_matrix": {
+        "tn": 28,
+        "fp": 13,
+        "fn": 4,
+        "tp": 16,
+        "true_positive": 16,
+        "false_positive": 13,
+        "false_negative": 4,
+        "true_negative": 28,
+        "total": 61
+      },
+      "cv_5fold": {
+        "accuracy_mean": 0.6564625850340137,
+        "accuracy_std": 0.0621696926817175,
+        "roc_auc_mean": 0.720177455132083,
+        "roc_auc_std": 0.04860218357658406,
+        "balanced_accuracy_mean": 0.6530812663843517,
+        "sensitivity_mean": 0.6374269005847953,
+        "f1_mean": 0.5885238164307932
+      },
+      "cv_repeated_25fold": {
+        "accuracy_mean": 0.6419897959183674,
+        "accuracy_std": 0.04911912051706765,
+        "roc_auc_mean": 0.7020669489816495,
+        "roc_auc_std": 0.05742400792711143,
+        "balanced_accuracy_mean": 0.6353962492437991,
+        "sensitivity_mean": 0.6059649122807017,
+        "f1_mean": 0.5667278371935505
+      },
+      "test_support": {
+        "class_0_normal": 41,
+        "class_1_stenosis": 20
+      }
+    }
+  },
+  "target_leakage_prevented": true,
+  "excluded_targets": [
+    "Cath",
+    "LAD",
+    "LCX",
+    "RCA"
+  ],
+  "global_shap": {
+    "CAD": {
+      "transformed_features": [
+        {
+          "feature": "num__Typical Chest Pain",
+          "mean_abs_shap": 1.5656335766980138
+        },
+        {
+          "feature": "num__Region RWMA",
+          "mean_abs_shap": 0.7872314612719254
+        },
+        {
+          "feature": "num__Age",
+          "mean_abs_shap": 0.5775405810004648
+        },
+        {
+          "feature": "num__DM",
+          "mean_abs_shap": 0.3991239724937079
+        },
+        {
+          "feature": "num__Tinversion",
+          "mean_abs_shap": 0.36600194416907794
+        },
+        {
+          "feature": "num__HTN",
+          "mean_abs_shap": 0.28451666230261047
+        },
+        {
+          "feature": "num__ESR",
+          "mean_abs_shap": 0.274775426644
+        },
+        {
+          "feature": "num__TG",
+          "mean_abs_shap": 0.2298114856468275
+        },
+        {
+          "feature": "num__BP",
+          "mean_abs_shap": 0.20266305613010996
+        },
+        {
+          "feature": "num__PR",
+          "mean_abs_shap": 0.18344074425446805
+        },
+        {
+          "feature": "num__FH",
+          "mean_abs_shap": 0.1805194006566326
+        },
+        {
+          "feature": "num__Neut",
+          "mean_abs_shap": 0.16466846977949764
+        },
+        {
+          "feature": "num__St Elevation",
+          "mean_abs_shap": 0.07965518051185108
+        },
+        {
+          "feature": "num__Function Class",
+          "mean_abs_shap": 0.07494273612797132
+        },
+        {
+          "feature": "num__LDL",
+          "mean_abs_shap": 0.07058355520561986
+        },
+        {
+          "feature": "num__CR",
+          "mean_abs_shap": 0.06402692857742
+        },
+        {
+          "feature": "num__EF-TTE",
+          "mean_abs_shap": 0.05276522737013935
+        },
+        {
+          "feature": "num__PLT",
+          "mean_abs_shap": 0.035429787751565384
+        },
+        {
+          "feature": "num__BMI",
+          "mean_abs_shap": 0.03377330053521017
+        },
+        {
+          "feature": "num__HDL",
+          "mean_abs_shap": 0.016045311136652977
+        }
+      ],
+      "original_features": [
+        {
+          "feature": "Typical Chest Pain",
+          "mean_abs_shap": 1.5656335766980138,
+          "unit": "0=No, 1=Yes",
+          "desc": "Substernal exertional chest pain relieved by rest/NTG"
+        },
+        {
+          "feature": "Region RWMA",
+          "mean_abs_shap": 0.7872314612719254,
+          "unit": "score 0-4",
+          "desc": "Regional Wall Motion Abnormality score (0=none to 4=severe/multiple)"
+        },
+        {
+          "feature": "Age",
+          "mean_abs_shap": 0.5775405810004648,
+          "unit": "years",
+          "desc": "Patient Age in years"
+        },
+        {
+          "feature": "DM",
+          "mean_abs_shap": 0.3991239724937079,
+          "unit": "0=No, 1=Yes",
+          "desc": "Diabetes Mellitus history"
+        },
+        {
+          "feature": "Tinversion",
+          "mean_abs_shap": 0.36600194416907794,
+          "unit": "0=No, 1=Yes",
+          "desc": "T-wave inversion on 12-lead ECG"
+        },
+        {
+          "feature": "HTN",
+          "mean_abs_shap": 0.28451666230261047,
+          "unit": "0=No, 1=Yes",
+          "desc": "Hypertension history"
+        },
+        {
+          "feature": "ESR",
+          "mean_abs_shap": 0.274775426644,
+          "unit": "mm/hr",
+          "desc": "Erythrocyte Sedimentation Rate"
+        },
+        {
+          "feature": "TG",
+          "mean_abs_shap": 0.2298114856468275,
+          "unit": "mg/dL",
+          "desc": "Serum Triglycerides"
+        },
+        {
+          "feature": "BP",
+          "mean_abs_shap": 0.20266305613010996,
+          "unit": "mmHg",
+          "desc": "Systolic Blood Pressure"
+        },
+        {
+          "feature": "PR",
+          "mean_abs_shap": 0.18344074425446805,
+          "unit": "bpm",
+          "desc": "Resting Pulse Rate"
+        },
+        {
+          "feature": "FH",
+          "mean_abs_shap": 0.1805194006566326,
+          "unit": "0=No, 1=Yes",
+          "desc": "Family History of Premature CAD"
+        },
+        {
+          "feature": "Neut",
+          "mean_abs_shap": 0.16466846977949764,
+          "unit": "%",
+          "desc": "Neutrophil differential percentage"
+        },
+        {
+          "feature": "St Elevation",
+          "mean_abs_shap": 0.07965518051185108,
+          "unit": "0=No, 1=Yes",
+          "desc": "ST-segment elevation on resting 12-lead ECG"
+        },
+        {
+          "feature": "Function Class",
+          "mean_abs_shap": 0.07494273612797132,
+          "unit": "NYHA 0-3",
+          "desc": "NYHA Functional Class (Heart failure/angina severity)"
+        },
+        {
+          "feature": "LDL",
+          "mean_abs_shap": 0.07058355520561986,
+          "unit": "mg/dL",
+          "desc": "Low-Density Lipoprotein Cholesterol"
+        }
+      ]
+    },
+    "LAD": {
+      "transformed_features": [
+        {
+          "feature": "num__Typical Chest Pain",
+          "mean_abs_shap": 0.06253729390088464
+        },
+        {
+          "feature": "num__EF-TTE",
+          "mean_abs_shap": 0.03856498677695474
+        },
+        {
+          "feature": "num__Region RWMA",
+          "mean_abs_shap": 0.03781617704467286
+        },
+        {
+          "feature": "num__Age",
+          "mean_abs_shap": 0.03514281488980698
+        },
+        {
+          "feature": "cat__Atypical_Y",
+          "mean_abs_shap": 0.03279523474641509
+        },
+        {
+          "feature": "cat__Atypical_N",
+          "mean_abs_shap": 0.028100968807099776
+        },
+        {
+          "feature": "num__ESR",
+          "mean_abs_shap": 0.019024796134015656
+        },
+        {
+          "feature": "num__Tinversion",
+          "mean_abs_shap": 0.018501882264163515
+        },
+        {
+          "feature": "num__FBS",
+          "mean_abs_shap": 0.01421105309781569
+        },
+        {
+          "feature": "num__Neut",
+          "mean_abs_shap": 0.013976284915934063
+        },
+        {
+          "feature": "num__Lymph",
+          "mean_abs_shap": 0.012643545535148314
+        },
+        {
+          "feature": "num__HTN",
+          "mean_abs_shap": 0.008406549233760944
+        },
+        {
+          "feature": "num__BP",
+          "mean_abs_shap": 0.0076105233301947605
+        },
+        {
+          "feature": "num__PR",
+          "mean_abs_shap": 0.007328139146602238
+        },
+        {
+          "feature": "num__LDL",
+          "mean_abs_shap": 0.006641713404160471
+        },
+        {
+          "feature": "num__K",
+          "mean_abs_shap": 0.006433154395980862
+        },
+        {
+          "feature": "num__TG",
+          "mean_abs_shap": 0.006369506843294378
+        },
+        {
+          "feature": "num__CR",
+          "mean_abs_shap": 0.006086736142224114
+        },
+        {
+          "feature": "num__BMI",
+          "mean_abs_shap": 0.006058939790689066
+        },
+        {
+          "feature": "num__Weight",
+          "mean_abs_shap": 0.005778474492585631
+        }
+      ],
+      "original_features": [
+        {
+          "feature": "Typical Chest Pain",
+          "mean_abs_shap": 0.06253729390088464,
+          "unit": "0=No, 1=Yes",
+          "desc": "Substernal exertional chest pain relieved by rest/NTG"
+        },
+        {
+          "feature": "Atypical",
+          "mean_abs_shap": 0.06089620355351487,
+          "unit": "",
+          "desc": "Atypical anginal symptoms"
+        },
+        {
+          "feature": "EF-TTE",
+          "mean_abs_shap": 0.03856498677695474,
+          "unit": "%",
+          "desc": "Transthoracic Echocardiogram Ejection Fraction"
+        },
+        {
+          "feature": "Region RWMA",
+          "mean_abs_shap": 0.03781617704467286,
+          "unit": "score 0-4",
+          "desc": "Regional Wall Motion Abnormality score (0=none to 4=severe/multiple)"
+        },
+        {
+          "feature": "Age",
+          "mean_abs_shap": 0.03514281488980698,
+          "unit": "years",
+          "desc": "Patient Age in years"
+        },
+        {
+          "feature": "ESR",
+          "mean_abs_shap": 0.019024796134015656,
+          "unit": "mm/hr",
+          "desc": "Erythrocyte Sedimentation Rate"
+        },
+        {
+          "feature": "Tinversion",
+          "mean_abs_shap": 0.018501882264163515,
+          "unit": "0=No, 1=Yes",
+          "desc": "T-wave inversion on 12-lead ECG"
+        },
+        {
+          "feature": "FBS",
+          "mean_abs_shap": 0.01421105309781569,
+          "unit": "mg/dL",
+          "desc": "Fasting Blood Sugar level"
+        },
+        {
+          "feature": "Neut",
+          "mean_abs_shap": 0.013976284915934063,
+          "unit": "%",
+          "desc": "Neutrophil differential percentage"
+        },
+        {
+          "feature": "Lymph",
+          "mean_abs_shap": 0.012643545535148314,
+          "unit": "%",
+          "desc": "Lymphocyte differential percentage"
+        },
+        {
+          "feature": "HTN",
+          "mean_abs_shap": 0.008406549233760944,
+          "unit": "0=No, 1=Yes",
+          "desc": "Hypertension history"
+        },
+        {
+          "feature": "BP",
+          "mean_abs_shap": 0.0076105233301947605,
+          "unit": "mmHg",
+          "desc": "Systolic Blood Pressure"
+        },
+        {
+          "feature": "Nonanginal",
+          "mean_abs_shap": 0.007599064317190178,
+          "unit": "",
+          "desc": "Non-anginal chest discomfort"
+        },
+        {
+          "feature": "PR",
+          "mean_abs_shap": 0.007328139146602238,
+          "unit": "bpm",
+          "desc": "Resting Pulse Rate"
+        },
+        {
+          "feature": "LDL",
+          "mean_abs_shap": 0.006641713404160471,
+          "unit": "mg/dL",
+          "desc": "Low-Density Lipoprotein Cholesterol"
+        }
+      ]
+    },
+    "LCX": {
+      "transformed_features": [
+        {
+          "feature": "num__Age",
+          "mean_abs_shap": 0.04266164464380485
+        },
+        {
+          "feature": "num__Typical Chest Pain",
+          "mean_abs_shap": 0.03159980495082177
+        },
+        {
+          "feature": "num__FBS",
+          "mean_abs_shap": 0.025260421921311085
+        },
+        {
+          "feature": "num__CR",
+          "mean_abs_shap": 0.019564826629880898
+        },
+        {
+          "feature": "num__PLT",
+          "mean_abs_shap": 0.019449753874357774
+        },
+        {
+          "feature": "cat__Atypical_N",
+          "mean_abs_shap": 0.016613059884508497
+        },
+        {
+          "feature": "num__TG",
+          "mean_abs_shap": 0.015639014356920812
+        },
+        {
+          "feature": "num__Length",
+          "mean_abs_shap": 0.013796743221375507
+        },
+        {
+          "feature": "num__BP",
+          "mean_abs_shap": 0.0121382356554706
+        },
+        {
+          "feature": "cat__Atypical_Y",
+          "mean_abs_shap": 0.011938055556815336
+        },
+        {
+          "feature": "num__BUN",
+          "mean_abs_shap": 0.011495757303807391
+        },
+        {
+          "feature": "num__HDL",
+          "mean_abs_shap": 0.010446361900948097
+        },
+        {
+          "feature": "num__K",
+          "mean_abs_shap": 0.010409508751647431
+        },
+        {
+          "feature": "num__EF-TTE",
+          "mean_abs_shap": 0.009658916144815661
+        },
+        {
+          "feature": "num__ESR",
+          "mean_abs_shap": 0.009572752025214933
+        },
+        {
+          "feature": "num__Na",
+          "mean_abs_shap": 0.008916845854365798
+        },
+        {
+          "feature": "num__HTN",
+          "mean_abs_shap": 0.008600648936628746
+        },
+        {
+          "feature": "num__HB",
+          "mean_abs_shap": 0.008434757695446677
+        },
+        {
+          "feature": "num__Lymph",
+          "mean_abs_shap": 0.00768966432601286
+        },
+        {
+          "feature": "num__BMI",
+          "mean_abs_shap": 0.006726572175828483
+        }
+      ],
+      "original_features": [
+        {
+          "feature": "Age",
+          "mean_abs_shap": 0.04266164464380485,
+          "unit": "years",
+          "desc": "Patient Age in years"
+        },
+        {
+          "feature": "Typical Chest Pain",
+          "mean_abs_shap": 0.03159980495082177,
+          "unit": "0=No, 1=Yes",
+          "desc": "Substernal exertional chest pain relieved by rest/NTG"
+        },
+        {
+          "feature": "Atypical",
+          "mean_abs_shap": 0.028551115441323834,
+          "unit": "",
+          "desc": "Atypical anginal symptoms"
+        },
+        {
+          "feature": "FBS",
+          "mean_abs_shap": 0.025260421921311085,
+          "unit": "mg/dL",
+          "desc": "Fasting Blood Sugar level"
+        },
+        {
+          "feature": "CR",
+          "mean_abs_shap": 0.019564826629880898,
+          "unit": "mg/dL",
+          "desc": "Serum Creatinine"
+        },
+        {
+          "feature": "PLT",
+          "mean_abs_shap": 0.019449753874357774,
+          "unit": "x10\u00b3/\u03bcL",
+          "desc": "Platelet Count"
+        },
+        {
+          "feature": "TG",
+          "mean_abs_shap": 0.015639014356920812,
+          "unit": "mg/dL",
+          "desc": "Serum Triglycerides"
+        },
+        {
+          "feature": "Length",
+          "mean_abs_shap": 0.013796743221375507,
+          "unit": "cm",
+          "desc": "Body Height / Stature"
+        },
+        {
+          "feature": "BP",
+          "mean_abs_shap": 0.0121382356554706,
+          "unit": "mmHg",
+          "desc": "Systolic Blood Pressure"
+        },
+        {
+          "feature": "BUN",
+          "mean_abs_shap": 0.011495757303807391,
+          "unit": "mg/dL",
+          "desc": "Blood Urea Nitrogen"
+        },
+        {
+          "feature": "HDL",
+          "mean_abs_shap": 0.010446361900948097,
+          "unit": "mg/dL",
+          "desc": "High-Density Lipoprotein Cholesterol"
+        },
+        {
+          "feature": "K",
+          "mean_abs_shap": 0.010409508751647431,
+          "unit": "mEq/L",
+          "desc": "Serum Potassium concentration"
+        },
+        {
+          "feature": "EF-TTE",
+          "mean_abs_shap": 0.009658916144815661,
+          "unit": "%",
+          "desc": "Transthoracic Echocardiogram Ejection Fraction"
+        },
+        {
+          "feature": "ESR",
+          "mean_abs_shap": 0.009572752025214933,
+          "unit": "mm/hr",
+          "desc": "Erythrocyte Sedimentation Rate"
+        },
+        {
+          "feature": "Na",
+          "mean_abs_shap": 0.008916845854365798,
+          "unit": "mEq/L",
+          "desc": "Serum Sodium concentration"
+        }
+      ]
+    },
+    "RCA": {
+      "transformed_features": [
+        {
+          "feature": "num__Typical Chest Pain",
+          "mean_abs_shap": 0.3178677558898926
+        },
+        {
+          "feature": "num__Age",
+          "mean_abs_shap": 0.28464004397392273
+        },
+        {
+          "feature": "num__Neut",
+          "mean_abs_shap": 0.20885726809501648
+        },
+        {
+          "feature": "num__ESR",
+          "mean_abs_shap": 0.190088152885437
+        },
+        {
+          "feature": "num__DM",
+          "mean_abs_shap": 0.17831823229789734
+        },
+        {
+          "feature": "num__TG",
+          "mean_abs_shap": 0.1251222938299179
+        },
+        {
+          "feature": "num__HB",
+          "mean_abs_shap": 0.12167626619338989
+        },
+        {
+          "feature": "num__Lymph",
+          "mean_abs_shap": 0.08376356959342957
+        },
+        {
+          "feature": "num__PLT",
+          "mean_abs_shap": 0.051467638462781906
+        },
+        {
+          "feature": "num__Weight",
+          "mean_abs_shap": 0.051075708121061325
+        },
+        {
+          "feature": "cat__Dyspnea_N",
+          "mean_abs_shap": 0.047231219708919525
+        },
+        {
+          "feature": "num__FBS",
+          "mean_abs_shap": 0.04382909834384918
+        },
+        {
+          "feature": "num__WBC",
+          "mean_abs_shap": 0.03927138075232506
+        },
+        {
+          "feature": "num__Length",
+          "mean_abs_shap": 0.03026619367301464
+        },
+        {
+          "feature": "num__CR",
+          "mean_abs_shap": 0.028942817822098732
+        },
+        {
+          "feature": "num__HDL",
+          "mean_abs_shap": 0.02257584035396576
+        },
+        {
+          "feature": "num__EF-TTE",
+          "mean_abs_shap": 0.017114028334617615
+        },
+        {
+          "feature": "num__K",
+          "mean_abs_shap": 0.011791666969656944
+        },
+        {
+          "feature": "num__Na",
+          "mean_abs_shap": 0.011288771405816078
+        },
+        {
+          "feature": "num__BMI",
+          "mean_abs_shap": 0.009886045940220356
+        }
+      ],
+      "original_features": [
+        {
+          "feature": "Typical Chest Pain",
+          "mean_abs_shap": 0.3178677558898926,
+          "unit": "0=No, 1=Yes",
+          "desc": "Substernal exertional chest pain relieved by rest/NTG"
+        },
+        {
+          "feature": "Age",
+          "mean_abs_shap": 0.28464004397392273,
+          "unit": "years",
+          "desc": "Patient Age in years"
+        },
+        {
+          "feature": "Neut",
+          "mean_abs_shap": 0.20885726809501648,
+          "unit": "%",
+          "desc": "Neutrophil differential percentage"
+        },
+        {
+          "feature": "ESR",
+          "mean_abs_shap": 0.190088152885437,
+          "unit": "mm/hr",
+          "desc": "Erythrocyte Sedimentation Rate"
+        },
+        {
+          "feature": "DM",
+          "mean_abs_shap": 0.17831823229789734,
+          "unit": "0=No, 1=Yes",
+          "desc": "Diabetes Mellitus history"
+        },
+        {
+          "feature": "TG",
+          "mean_abs_shap": 0.1251222938299179,
+          "unit": "mg/dL",
+          "desc": "Serum Triglycerides"
+        },
+        {
+          "feature": "HB",
+          "mean_abs_shap": 0.12167626619338989,
+          "unit": "g/dL",
+          "desc": "Hemoglobin concentration"
+        },
+        {
+          "feature": "Lymph",
+          "mean_abs_shap": 0.08376356959342957,
+          "unit": "%",
+          "desc": "Lymphocyte differential percentage"
+        },
+        {
+          "feature": "PLT",
+          "mean_abs_shap": 0.051467638462781906,
+          "unit": "x10\u00b3/\u03bcL",
+          "desc": "Platelet Count"
+        },
+        {
+          "feature": "Weight",
+          "mean_abs_shap": 0.051075708121061325,
+          "unit": "kg",
+          "desc": "Body Weight"
+        },
+        {
+          "feature": "Dyspnea",
+          "mean_abs_shap": 0.047231219708919525,
+          "unit": "",
+          "desc": "Exertional dyspnea / shortness of breath"
+        },
+        {
+          "feature": "FBS",
+          "mean_abs_shap": 0.04382909834384918,
+          "unit": "mg/dL",
+          "desc": "Fasting Blood Sugar level"
+        },
+        {
+          "feature": "WBC",
+          "mean_abs_shap": 0.03927138075232506,
+          "unit": "cells/\u03bcL",
+          "desc": "White Blood Cell Count"
+        },
+        {
+          "feature": "Length",
+          "mean_abs_shap": 0.03026619367301464,
+          "unit": "cm",
+          "desc": "Body Height / Stature"
+        },
+        {
+          "feature": "CR",
+          "mean_abs_shap": 0.028942817822098732,
+          "unit": "mg/dL",
+          "desc": "Serum Creatinine"
+        }
+      ]
+    }
+  },
+  "pipeline_environment": {
+    "scikit_learn_version": "1.7.2",
+    "xgboost_version": "2.1.4",
+    "shap_version": "0.53.0",
+    "numpy_version": "2.3.5",
+    "random_seed": 42
+  }
+}
